@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RO34 Performance — Coming soon</title>
+<meta name="description" content="RO34 Performance is coming to the USA: aero kits and performance parts.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="RO34 Performance — Coming soon">
+<meta property="og:description" content="Aero kits &amp; performance parts. Coming soon to the USA.">
+<meta property="og:image" content="https://ro34.com/assets/ro34-logo.png">
+<meta property="og:url" content="https://ro34.com/">
+<link rel="canonical" href="https://ro34.com/">
+<style>
+  @font-face {
+    font-family: "Montserrat";
+    src: url("assets/montserrat-latin.woff2") format("woff2");
+    font-weight: 400 800;
+    font-display: swap;
+  }
+  :root {
+    --bg: #09090b;
+    --card: rgba(255,255,255,.04);
+    --card-hover: rgba(255,255,255,.07);
+    --line: rgba(255,255,255,.09);
+    --text: #f5f5f6;
+    --muted: #9b9ba4;
+    --red: #DF0600;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background:
+      radial-gradient(120% 60% at 50% -10%, rgba(223,6,0,.22), transparent 60%),
+      radial-gradient(80% 40% at 50% 110%, rgba(223,6,0,.08), transparent 70%),
+      var(--bg);
+    background-attachment: fixed;
+    color: var(--text);
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Geeza Pro", "Noto Sans Arabic", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 44px 16px 36px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { width: 100%; max-width: 440px; text-align: center; }
+  .logo { width: 260px; max-width: 76%; height: auto; display: block; margin: 0 auto 20px; filter: drop-shadow(0 6px 24px rgba(223,6,0,.25)); }
+  .bio { margin: 0 0 34px; }
+  .bio p { margin: 0 0 4px; font-size: 15px; font-weight: 600; line-height: 1.5; }
+  .bio .es, .bio .ar { color: var(--muted); font-size: 13px; font-weight: 500; }
+  .group {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 16px 14px 6px; margin-bottom: 18px; text-align: left;
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  }
+  .section, .subsection {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); margin: 0 4px 12px;
+  }
+  .section { color: var(--text); }
+  .subsection { font-weight: 600; letter-spacing: .12em; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .section span[lang="ar"], .subsection span[lang="ar"] { letter-spacing: 0; text-transform: none; font-size: 12px; font-weight: 500; }
+  .btn {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: rgba(255,255,255,.03); border: 1px solid var(--line);
+    color: var(--text); text-decoration: none;
+    padding: 14px 14px 14px 16px; border-radius: 12px; margin-bottom: 10px;
+    font-size: 15px; font-weight: 700; text-align: left;
+    position: relative; overflow: hidden;
+    transition: background .2s, border-color .2s, transform .2s;
+  }
+  a.btn::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--red); }
+  a.btn:hover, a.btn:focus-visible { background: var(--card-hover); border-color: rgba(223,6,0,.6); transform: translateY(-1px); outline: none; }
+  .btn small { display: block; font-weight: 500; font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .btn .arrow {
+    flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--red); color: #fff; font-size: 15px; font-weight: 700;
+    transition: transform .2s;
+  }
+  a.btn:hover .arrow { transform: translateX(2px); }
+  .btn.soon { color: var(--muted); background: transparent; border-style: dashed; }
+  .btn.soon .badge {
+    flex: none; font-size: 10px; font-weight: 600; letter-spacing: .04em; line-height: 1.35; text-align: center;
+    color: var(--muted); border: 1px solid var(--line); border-radius: 10px; padding: 5px 9px;
+  }
+  .social { display: flex; justify-content: center; gap: 10px; margin: 26px 0 28px; flex-wrap: wrap; }
+  .social a {
+    width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center;
+    background: var(--card); border: 1px solid var(--line); color: var(--text);
+    transition: background .2s, border-color .2s, transform .2s;
+  }
+  .social a:hover, .social a:focus-visible { background: var(--red); border-color: var(--red); transform: translateY(-2px); outline: none; }
+  .social svg { width: 19px; height: 19px; fill: currentColor; }
+  footer { font-size: 11px; color: var(--muted); line-height: 1.8; letter-spacing: .02em; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+<style>
+  body { align-items: center; }
+  .soon-title { font-size: 26px; font-weight: 800; letter-spacing: -.01em; margin: 6px 0 8px; }
+  .soon-title em { font-style: normal; color: var(--red); }
+  .lead { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0 0 30px; }
+  .contact { font-size: 13px; color: var(--muted); margin: 0 0 4px; }
+  .contact a { color: var(--text); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--red); }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="assets/ro34-logo.png" alt="RO34 — Power · Precision · Performance" width="901" height="282">
+
+  <h1 class="soon-title">Coming soon to the <em>USA</em></h1>
+  <p class="lead">Aero kits &amp; performance parts.<br>Our US store is on its way.</p>
+
+  <div class="group">
+    <p class="section"><span>Shopping from Europe?</span></p>
+    <a class="btn" href="https://www.ro34.eu/?utm_source=ro34.com&amp;utm_medium=referral&amp;utm_campaign=coming_soon">
+      <span>Visit our European store<small>ro34.eu</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+  </div>
+
+  <p class="contact">Questions? <a href="mailto:hello@ro34.com">hello@ro34.com</a></p>
+
+  <nav class="social" aria-label="Social media">
+    <a href="https://www.instagram.com/ro34performance/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.1 3.3c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8a3.1 3.1 0 1 0 0-6.2 3.1 3.1 0 0 0 0 6.2zm6.3-8.2a1.2 1.2 0 1 1-2.3 0 1.2 1.2 0 0 1 2.3 0z"/></svg></a>
+    <a href="https://www.tiktok.com/@ro34performance" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.1-2.8V9a6.3 6.3 0 1 0 5.4 6.2V8.6a8 8 0 0 0 4.6 1.5V6.8a4.6 4.6 0 0 1-4.6-4.8z"/></svg></a>
+    <a href="https://www.facebook.com/ro34performance" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21.9v-7.4h2.5l.4-2.9h-2.9V9.8c0-.8.2-1.4 1.4-1.4h1.5V5.8c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H8v2.9h2.5v7.4h3z"/></svg></a>
+    <a href="https://x.com/ro34performance" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2.1l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></a>
+    <a href="https://www.pinterest.com/ro34performance/" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .8-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.5-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.2c0 .2-.2.2-.4.1-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2.1-1.3 2.8A10 10 0 1 0 12 2z"/></svg></a>
+  </nav>
+
+  <footer>© 2026 RO34 LLC · California, USA · RO34™</footer>
+</main>
+</body>
+</html>
